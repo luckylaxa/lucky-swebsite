@@ -1,68 +1,43 @@
-# United Architects, Inc. — Landing Page
+# United Architects, Inc. — Website + CMS
 
-A redesigned landing page for [United Architects, Inc.](https://www.unitedarchitectsinc.com/),
-a Coral Gables architecture firm established in 1986.
+A **Next.js** app: the public marketing site plus a custom **`/admin`** CMS so the
+client can update content without touching code.
 
-This is the **initial landing page only** — a foundation to review and sign off on
-before building out the rest of the site.
+- **Auth:** Clerk (single admin, email allowlist — no roles)
+- **Content + images:** Supabase (Postgres + Storage)
+- **Hosting:** Vercel · **Design:** light mode, no gradients, Space Grotesk + Hanken Grotesk
 
-## Design notes
+## What the client can do
+- Edit copy on the home page, section by section.
+- Swap images (hero, projects, portrait, OG) by **drag-and-drop**.
+- Manage a **journal** with a **draft → publish** workflow.
+- Set **SEO** (title, description, social image) per page and per post.
 
-- **Light mode**, warm paper palette, **no gradients** anywhere.
-- Distinctive sans-serif type: **Space Grotesk** (headings) + **Hanken Grotesk** (body)
-  — deliberately avoiding Roboto/Inter.
-- **Subtle scroll animations** via `IntersectionObserver` (fade + rise, gentle stagger),
-  fully disabled under `prefers-reduced-motion`.
-- Restrained header sizing (the H1 tops out around 2.95rem).
-- Editorial rhythm inspired by the supplied reference: image-led hero, centered
-  value props, alternating bands, a project grid, and a calm dark firm section.
-- Fully responsive, keyboard-accessible, self-contained (only a web-font CDN).
-
-## Running it
-
-It's a static site — open `index.html` in a browser, or serve the folder:
-
+## Quick start
 ```bash
-python3 -m http.server 8000
-# then visit http://localhost:8000
+npm install
+cp .env.local.example .env.local   # fill in Clerk + Supabase keys
+npm run dev                        # site: localhost:3000 · CMS: /admin
 ```
 
-## Copy
+**Full setup (Clerk, Supabase, deploy) → see [`SETUP.md`](./SETUP.md).**
 
-All text is the firm's own copy — philosophy, the 10-Point Project Management
-Checklist, the six service areas, principal bio, awards, and contact details
-(4000 Ponce de Leon Blvd., Suite 470; (305) 552-5465; MLC@UnitedArchs.com).
+## Scripts
+| | |
+|---|---|
+| `npm run dev` | Local dev server |
+| `npm run build` / `npm start` | Production build / serve |
+| `npm run typecheck` | TypeScript check |
 
-## Images
+## Structure
+```
+app/(site)   Public site (home + journal), reuses the approved design
+app/admin    CMS dashboard (Clerk-protected)
+lib/         Supabase clients, auth, queries, server actions, types, defaults
+supabase/    SQL migration + seed
+components/  site/ (public UI) · admin/ (editors, dropzone, rich text)
+legacy/      Original static build, kept for reference
+```
 
-The five photographic slots are **already filled with real modern-architecture
-photos** (`assets/*.jpg`). Each `<img>` also keeps its original line-drawing
-(`.svg`) as an `onerror` fallback, so the page still renders cleanly even if a
-photo is ever removed.
-
-| File | Slot | Current photo |
-| --- | --- | --- |
-| `assets/hero.jpg` | Hero (~5:6) | White modern residence with garden |
-| `assets/project-01.jpg` | Residential, tall (~4:5) | Two-story custom home |
-| `assets/project-02.jpg` | Educational (~4:3) | Angular modern institutional building |
-| `assets/project-03.jpg` | Multi-family (~4:3) | Multi-story building with balconies |
-| `assets/project-04.jpg` | Commercial, wide (~2:1) | Large-scale modern building |
-
-**Source & licensing:** these are stand-in photos pulled from free, open-source
-website templates ([ThemeWagon](https://themewagon.github.io/archi-new/) Archi &
-VillaAgency). They're fine for development and review, but **before launch you
-should swap in photographs of United Architects' own completed projects** — the
-whole point is to show the firm's real work. Replacing is a drop-in: save over
-the same filename in `assets/` (any `.jpg`/`.webp`), no code change needed.
-
-### Still to replace with the firm's own assets
-
-| File | Used for | Replace with |
-| --- | --- | --- |
-| `assets/logo.svg` | Header wordmark (dark) | The firm's real logo |
-| `assets/logo-light.svg` | Footer wordmark (on dark) | Light/reversed version of the logo |
-| `assets/portrait.svg` | Principal portrait | A real photo of Maria Luisa Castellanos (save as `portrait.jpg` and switch the `src` in `index.html`) — a stock face is deliberately **not** used here, since the section names a real person |
-
-`unitedarchitectsinc.com` was blocked in this environment, so the firm's real
-logo and project photography couldn't be pulled directly — send them over (or
-have the domain allow-listed) and they'll wire straight in.
+The site renders from bundled default content until Supabase is connected, so it
+never shows a blank or broken page.
