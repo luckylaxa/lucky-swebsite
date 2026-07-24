@@ -44,4 +44,29 @@
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
   }
+
+  // ---- Mobile hamburger menu ----
+  var navToggle = document.getElementById('navToggle');
+  var mobileNav = document.getElementById('mobileNav');
+  if (navToggle && mobileNav && header) {
+    var setMenu = function (open) {
+      mobileNav.hidden = !open;
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      header.classList.toggle('nav-open', open);
+    };
+    navToggle.addEventListener('click', function () { setMenu(mobileNav.hidden); });
+    // close after tapping a link
+    Array.prototype.slice.call(mobileNav.querySelectorAll('a')).forEach(function (a) {
+      a.addEventListener('click', function () { setMenu(false); });
+    });
+    // close on Escape
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !mobileNav.hidden) { setMenu(false); navToggle.focus(); }
+    });
+    // reset when resizing back up to desktop
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 900 && !mobileNav.hidden) setMenu(false);
+    });
+  }
 })();

@@ -23,12 +23,30 @@
       <nav class="nav" aria-label="Primary">
         <a href="#work">Work</a>
         <a href="#services">Services</a>
-        <a href="#method">Method</a>
+        <a href="#process">Process</a>
+        <a href="#gallery">Gallery</a>
         <a href="#firm">Firm</a>
       </nav>
       <div class="header-actions">
         <a class="phone" href="tel:+13055525465">(305) 552-5465</a>
         <a class="btn btn--dark" href="#contact">Start a project <span class="arw" aria-hidden="true">&rarr;</span></a>
+      </div>
+      <button class="hamburger" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-nav" id="mobileNav" hidden>
+      <nav aria-label="Mobile">
+        <a href="#work">Work</a>
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#method">Method</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#firm">Firm</a>
+      </nav>
+      <div class="mobile-nav-foot">
+        <a class="phone" href="tel:+13055525465">(305) 552-5465</a>
+        <a class="btn btn--dark btn--block" href="#contact">Start a project <span class="arw" aria-hidden="true">&rarr;</span></a>
       </div>
     </div>
   </header>
@@ -194,6 +212,18 @@
       </div>
     </section>
 
+    <!-- ================= FEATURE BAND ================= -->
+    <section class="feature" aria-label="Design philosophy">
+      <img class="feature-bg" src="assets/feature.jpg" alt="Modern residence with pool and glazed living spaces" loading="lazy" />
+      <div class="feature-overlay">
+        <div class="wrap feature-inner" data-reveal>
+          <p class="eyebrow eyebrow--light">Our philosophy</p>
+          <h2>We design for how a space will actually be lived in — the light, the flow, and the small moments in between.</h2>
+          <a class="btn btn--light" href="#process">See how we work <span class="arw" aria-hidden="true">&rarr;</span></a>
+        </div>
+      </div>
+    </section>
+
     <!-- ================= SERVICES ================= -->
     <section class="section section--paper" id="services">
       <div class="wrap">
@@ -276,6 +306,72 @@
             <p class="more">Plus six further checkpoints spanning survey, structural, MEP, life-safety, permitting, and closeout — reviewed on every project.</p>
           </li>
         </ul>
+      </div>
+    </section>
+
+    <!-- ================= PROCESS ================= -->
+    <section class="section section--paper" id="process">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <div class="head-lead">
+            <p class="eyebrow">How we work</p>
+            <h2>A clear path from first sketch to final walkthrough.</h2>
+          </div>
+          <p class="section-sub">Four phases, with one principal alongside you the whole way — so decisions stay informed and nothing slips between the drawings and the field.</p>
+        </div>
+        <ol class="process">
+          <li class="process-step" data-reveal>
+            <span class="process-no">01</span>
+            <h3>Consultation</h3>
+            <p>We listen to how you'll use the space, walk the site, and confirm zoning and budget before a line is drawn.</p>
+          </li>
+          <li class="process-step" data-reveal data-reveal-delay="1">
+            <span class="process-no">02</span>
+            <h3>Design</h3>
+            <p>Concepts become plans and elevations — resolved for light, flow, and the way you live, reviewed with you at each step.</p>
+          </li>
+          <li class="process-step" data-reveal data-reveal-delay="2">
+            <span class="process-no">03</span>
+            <h3>Documentation &amp; Permitting</h3>
+            <p>Construction documents are coordinated for code, ADA, and structure, then carried through municipal review.</p>
+          </li>
+          <li class="process-step" data-reveal data-reveal-delay="3">
+            <span class="process-no">04</span>
+            <h3>Construction</h3>
+            <p>We stay involved on site — answering questions and protecting the design intent through to the final walkthrough.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ================= GALLERY ================= -->
+    <section class="section" id="gallery">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <div class="head-lead">
+            <p class="eyebrow">A closer look</p>
+            <h2>Inside the spaces we shape.</h2>
+          </div>
+          <p class="section-sub">From street-facing elevations to the rooms where daily life happens — a few moments from recent work.</p>
+        </div>
+        <div class="gallery-grid">
+          <figure class="gallery-item gallery-item--wide" data-reveal>
+            <img src="assets/gallery-01.jpg" alt="Residence with pool and covered terrace" loading="lazy" />
+            <figcaption>Indoor–outdoor living</figcaption>
+          </figure>
+          <figure class="gallery-item" data-reveal data-reveal-delay="1">
+            <img src="assets/gallery-02.jpg" alt="Bright open-plan living room" loading="lazy" />
+            <figcaption>Open-plan living</figcaption>
+          </figure>
+          <figure class="gallery-item" data-reveal data-reveal-delay="2">
+            <img src="assets/gallery-03.jpg" alt="Custom kitchen with island and millwork" loading="lazy" />
+            <figcaption>Kitchen &amp; millwork</figcaption>
+          </figure>
+          <figure class="gallery-item gallery-item--wide" data-reveal data-reveal-delay="1">
+            <img src="assets/gallery-04.jpg" alt="Calm bedroom with layered natural light" loading="lazy" />
+            <figcaption>Rest &amp; retreat</figcaption>
+          </figure>
+        </div>
       </div>
     </section>
 
