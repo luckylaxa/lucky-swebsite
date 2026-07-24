@@ -33,30 +33,45 @@ All text is the firm's own copy — philosophy, the 10-Point Project Management
 Checklist, the six service areas, principal bio, awards, and contact details
 (4000 Ponce de Leon Blvd., Suite 470; (305) 552-5465; MLC@UnitedArchs.com).
 
-## ⚠️ Placeholder images — swap in the real assets
+## Images
 
-The build environment's network policy **blocked all access to
-`unitedarchitectsinc.com` (and to web archives)**, so the firm's real logo and
-photography could not be downloaded. The images in `assets/` are therefore
-**intentional architectural line-drawings** — an on-brand "elevation study"
-aesthetic — standing in for the real thing.
+The five photographic slots load `.jpg` files from `assets/`, with the original
+architectural line-drawings (`.svg`) kept as an **automatic fallback** — if a
+`.jpg` is missing, the `onerror` handler swaps in the matching `.svg`, so the
+page never shows a broken image. That means you can commit the code first and
+drop the photos in whenever.
 
-To go live, drop the real files into `assets/` using the **same filenames** (no
-code changes needed):
+### Add the free Unsplash photos
+
+The build environment couldn't reach `unsplash.com` (network policy), so the
+photos aren't bundled — but they're a two-minute drop-in. For each row below:
+open the link, click **Download free**, and save the file into `assets/` with
+the **exact filename** shown. All are free for commercial use, no attribution
+required.
+
+| Save as | Used for | Recommended photo |
+| --- | --- | --- |
+| `assets/hero.jpg` | Hero (portrait ~5:6) | [Modern house, glazing + garden](https://unsplash.com/photos/modern-house-with-large-windows-and-lush-garden-eWOgoFHlE8g) |
+| `assets/project-01.jpg` | Residential, tall (~4:5) | [House in lush greenery](https://unsplash.com/photos/modern-house-nestled-in-lush-greenery-KqrbNYj7QJQ) |
+| `assets/project-02.jpg` | Educational (~4:3) | [Glass-facade building](https://unsplash.com/photos/modern-building-with-glass-facade-reflecting-clouds-wyF7ZzJSMAM) |
+| `assets/project-03.jpg` | Multi-family (~4:3) | [Apartment building w/ balconies](https://unsplash.com/photos/exterior-of-a-modern-apartment-building-with-balconies-1iGG6k4Ci4E) |
+| `assets/project-04.jpg` | Commercial, wide (~2:1) | Pick from [commercial building](https://unsplash.com/s/photos/commercial-building) / [storefront](https://unsplash.com/s/photos/storefront) |
+
+**Prefer your own picks?** Browse these collections and save into the same
+filenames: [modern house exterior](https://unsplash.com/s/photos/modern-house-exterior),
+[apartment building](https://unsplash.com/s/photos/apartment-building),
+[school building](https://unsplash.com/s/photos/school-building),
+[architecture](https://unsplash.com/s/photos/architecture). On the download
+dialog pick a mid-size (~1600px wide) to keep the page fast.
+
+### Still to replace with the firm's own assets
 
 | File | Used for | Replace with |
 | --- | --- | --- |
 | `assets/logo.svg` | Header wordmark (dark) | The firm's real logo |
 | `assets/logo-light.svg` | Footer wordmark (on dark) | Light/reversed version of the logo |
-| `assets/hero.svg` | Hero visual | A signature building/render (portrait ~5:6) |
-| `assets/project-01.svg` | Work grid — Residential (tall) | Real project photo (~4:5) |
-| `assets/project-02.svg` | Work grid — Educational | Real project photo (~4:3) |
-| `assets/project-03.svg` | Work grid — Multi-family | Real project photo (~4:3) |
-| `assets/project-04.svg` | Work grid — Commercial (wide) | Real project photo (~2:1) |
-| `assets/portrait.svg` | Principal portrait | Photo of Maria Luisa Castellanos (~4:5) |
+| `assets/portrait.svg` | Principal portrait | A real photo of Maria Luisa Castellanos (save as `portrait.jpg` and switch the `src` in `index.html`) — a stock face is deliberately **not** used here, since the section names a real person |
 
-Raster photos (`.jpg` / `.webp`) work too — just update the matching `src`
-extension in `index.html`.
-
-Alternatively, send the assets over (or have the firm's domain allow-listed for
-the build environment) and they can be wired in directly.
+`unitedarchitectsinc.com` was blocked in this environment, so the firm's real
+logo and project photography couldn't be pulled directly — send them over (or
+have the domain allow-listed) and they'll wire straight in.
