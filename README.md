@@ -35,36 +35,25 @@ Checklist, the six service areas, principal bio, awards, and contact details
 
 ## Images
 
-Each photographic slot shows its architectural line-drawing (`.svg`)
-**immediately**, then **progressively upgrades** to a real photo: `main.js`
-loads the matching `.jpg` (named in each `<img data-photo="…">`) in the
-background and swaps it in only once it's confirmed present. If a photo is
-missing, the drawing simply stays — the page never shows a broken or empty
-image. So the site looks finished right now, and each photo you add is a
-zero-code, drop-in upgrade.
+The five photographic slots are **already filled with real modern-architecture
+photos** (`assets/*.jpg`). Each `<img>` also keeps its original line-drawing
+(`.svg`) as an `onerror` fallback, so the page still renders cleanly even if a
+photo is ever removed.
 
-### Add the free Unsplash photos
-
-The build environment couldn't reach `unsplash.com` (network policy), so the
-photos aren't bundled — but they're a two-minute drop-in. For each row below:
-open the link, click **Download free**, and save the file into `assets/` with
-the **exact filename** shown. All are free for commercial use, no attribution
-required.
-
-| Save as | Used for | Recommended photo |
+| File | Slot | Current photo |
 | --- | --- | --- |
-| `assets/hero.jpg` | Hero (portrait ~5:6) | [Modern house, glazing + garden](https://unsplash.com/photos/modern-house-with-large-windows-and-lush-garden-eWOgoFHlE8g) |
-| `assets/project-01.jpg` | Residential, tall (~4:5) | [House in lush greenery](https://unsplash.com/photos/modern-house-nestled-in-lush-greenery-KqrbNYj7QJQ) |
-| `assets/project-02.jpg` | Educational (~4:3) | [Glass-facade building](https://unsplash.com/photos/modern-building-with-glass-facade-reflecting-clouds-wyF7ZzJSMAM) |
-| `assets/project-03.jpg` | Multi-family (~4:3) | [Apartment building w/ balconies](https://unsplash.com/photos/exterior-of-a-modern-apartment-building-with-balconies-1iGG6k4Ci4E) |
-| `assets/project-04.jpg` | Commercial, wide (~2:1) | Pick from [commercial building](https://unsplash.com/s/photos/commercial-building) / [storefront](https://unsplash.com/s/photos/storefront) |
+| `assets/hero.jpg` | Hero (~5:6) | White modern residence with garden |
+| `assets/project-01.jpg` | Residential, tall (~4:5) | Two-story custom home |
+| `assets/project-02.jpg` | Educational (~4:3) | Angular modern institutional building |
+| `assets/project-03.jpg` | Multi-family (~4:3) | Multi-story building with balconies |
+| `assets/project-04.jpg` | Commercial, wide (~2:1) | Large-scale modern building |
 
-**Prefer your own picks?** Browse these collections and save into the same
-filenames: [modern house exterior](https://unsplash.com/s/photos/modern-house-exterior),
-[apartment building](https://unsplash.com/s/photos/apartment-building),
-[school building](https://unsplash.com/s/photos/school-building),
-[architecture](https://unsplash.com/s/photos/architecture). On the download
-dialog pick a mid-size (~1600px wide) to keep the page fast.
+**Source & licensing:** these are stand-in photos pulled from free, open-source
+website templates ([ThemeWagon](https://themewagon.github.io/archi-new/) Archi &
+VillaAgency). They're fine for development and review, but **before launch you
+should swap in photographs of United Architects' own completed projects** — the
+whole point is to show the firm's real work. Replacing is a drop-in: save over
+the same filename in `assets/` (any `.jpg`/`.webp`), no code change needed.
 
 ### Still to replace with the firm's own assets
 

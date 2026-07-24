@@ -7,19 +7,6 @@
   var yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  // ---- Progressive photo upgrade ----
-  // Each image shows its line-art .svg immediately. If a real photo
-  // (data-photo) is present, it loads in the background and replaces the
-  // drawing once ready. If the photo is missing, the drawing simply stays —
-  // so the page never shows a broken or empty image.
-  Array.prototype.slice.call(document.querySelectorAll('img[data-photo]')).forEach(function (img) {
-    var photo = img.getAttribute('data-photo');
-    if (!photo) return;
-    var probe = new Image();
-    probe.onload = function () { img.src = photo; };
-    probe.src = photo;
-  });
-
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   // ---- Scroll reveals ----
