@@ -35,11 +35,13 @@ Checklist, the six service areas, principal bio, awards, and contact details
 
 ## Images
 
-The five photographic slots load `.jpg` files from `assets/`, with the original
-architectural line-drawings (`.svg`) kept as an **automatic fallback** — if a
-`.jpg` is missing, the `onerror` handler swaps in the matching `.svg`, so the
-page never shows a broken image. That means you can commit the code first and
-drop the photos in whenever.
+Each photographic slot shows its architectural line-drawing (`.svg`)
+**immediately**, then **progressively upgrades** to a real photo: `main.js`
+loads the matching `.jpg` (named in each `<img data-photo="…">`) in the
+background and swaps it in only once it's confirmed present. If a photo is
+missing, the drawing simply stays — the page never shows a broken or empty
+image. So the site looks finished right now, and each photo you add is a
+zero-code, drop-in upgrade.
 
 ### Add the free Unsplash photos
 
