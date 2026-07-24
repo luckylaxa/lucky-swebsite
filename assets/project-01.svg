@@ -1,0 +1,22 @@
+<svg width="900" height="1120" viewBox="0 0 900 1120" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Custom single-family residence, elevation study">
+  <rect width="900" height="1120" fill="#EFEBE3"/>
+  <g stroke="#E3DDD1" stroke-width="1">
+    <line x1="0" y1="300" x2="900" y2="300"/><line x1="0" y1="600" x2="900" y2="600"/><line x1="0" y1="900" x2="900" y2="900"/>
+    <line x1="300" y1="0" x2="300" y2="1120"/><line x1="600" y1="0" x2="600" y2="1120"/>
+  </g>
+  <circle cx="720" cy="230" r="46" stroke="#C88A67" stroke-width="1.5" fill="none"/>
+  <line x1="0" y1="900" x2="900" y2="900" stroke="#B8AF9E" stroke-width="2"/>
+  <g stroke="#1A1917" stroke-width="2.2" fill="none" stroke-linejoin="round">
+    <path d="M170 470 L450 300 L730 470"/>
+    <rect x="210" y="470" width="480" height="430"/>
+    <g stroke="#6F6A62" stroke-width="1.2">
+      <line x1="210" y1="640" x2="690" y2="640"/>
+      <line x1="360" y1="470" x2="360" y2="900"/>
+      <line x1="540" y1="470" x2="540" y2="900"/>
+      <line x1="450" y1="330" x2="450" y2="470"/>
+    </g>
+    <rect x="410" y="740" width="90" height="160" stroke="#A45A3B" stroke-width="2.2"/>
+    <rect x="250" y="700" width="90" height="90"/>
+    <rect x="560" y="700" width="90" height="90"/>
+  </g>
+</svg>

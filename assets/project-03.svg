@@ -1,0 +1,21 @@
+<svg width="900" height="680" viewBox="0 0 900 680" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Multi-family residential building, elevation study">
+  <rect width="900" height="680" fill="#EFEBE3"/>
+  <g stroke="#E3DDD1" stroke-width="1"><line x1="0" y1="230" x2="900" y2="230"/><line x1="0" y1="450" x2="900" y2="450"/><line x1="300" y1="0" x2="300" y2="680"/><line x1="600" y1="0" x2="600" y2="680"/></g>
+  <line x1="0" y1="560" x2="900" y2="560" stroke="#B8AF9E" stroke-width="2"/>
+  <g stroke="#1A1917" stroke-width="2.2" fill="none" stroke-linejoin="round">
+    <rect x="280" y="130" width="340" height="430"/>
+    <rect x="280" y="130" width="340" height="70"/>
+    <g stroke="#6F6A62" stroke-width="1.2">
+      <line x1="280" y1="290" x2="620" y2="290"/>
+      <line x1="280" y1="380" x2="620" y2="380"/>
+      <line x1="280" y1="470" x2="620" y2="470"/>
+      <line x1="393" y1="200" x2="393" y2="560"/>
+      <line x1="506" y1="200" x2="506" y2="560"/>
+    </g>
+    <g stroke="#A45A3B" stroke-width="1.8">
+      <rect x="310" y="230" width="55" height="30"/>
+      <rect x="535" y="410" width="55" height="30"/>
+    </g>
+    <line x1="620" y1="200" x2="690" y2="200"/><line x1="690" y1="200" x2="690" y2="560"/>
+  </g>
+</svg>
