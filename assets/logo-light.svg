@@ -1,0 +1,10 @@
+<svg width="280" height="46" viewBox="0 0 280 46" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="United Architects, Inc.">
+  <g stroke="#F7F5F0" stroke-width="1.5" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M5 36 L21 8 L37 36" />
+    <path d="M11 36 L21 17 L31 36" />
+    <line x1="1.5" y1="36" x2="40.5" y2="36" />
+    <line x1="21" y1="8" x2="21" y2="36" stroke="#C88A67" stroke-width="1.2" />
+  </g>
+  <text x="54" y="19" font-family="'Space Grotesk','Segoe UI',sans-serif" font-size="15.5" font-weight="600" letter-spacing="2.5" fill="#F7F5F0">UNITED</text>
+  <text x="54" y="38" font-family="'Space Grotesk','Segoe UI',sans-serif" font-size="15.5" font-weight="600" letter-spacing="2.5" fill="#F7F5F0">ARCHITECTS</text>
+</svg>

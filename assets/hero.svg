@@ -1,0 +1,67 @@
+<svg width="1040" height="1200" viewBox="0 0 1040 1200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Elevation study of a modern Coral Gables residence">
+  <rect width="1040" height="1200" fill="#EFEBE3"/>
+
+  <!-- faint drafting grid -->
+  <g stroke="#E3DDD1" stroke-width="1">
+    <line x1="0" y1="200" x2="1040" y2="200"/>
+    <line x1="0" y1="400" x2="1040" y2="400"/>
+    <line x1="0" y1="600" x2="1040" y2="600"/>
+    <line x1="0" y1="800" x2="1040" y2="800"/>
+    <line x1="200" y1="0" x2="200" y2="1200"/>
+    <line x1="420" y1="0" x2="420" y2="1200"/>
+    <line x1="640" y1="0" x2="640" y2="1200"/>
+    <line x1="860" y1="0" x2="860" y2="1200"/>
+  </g>
+
+  <!-- sun -->
+  <circle cx="835" cy="235" r="52" stroke="#C88A67" stroke-width="1.6" fill="none"/>
+
+  <!-- ground -->
+  <line x1="0" y1="980" x2="1040" y2="980" stroke="#B8AF9E" stroke-width="2"/>
+
+  <!-- main volume -->
+  <g stroke="#1A1917" stroke-width="2.2" fill="none" stroke-linejoin="round">
+    <rect x="150" y="470" width="470" height="510"/>
+    <!-- upper cantilever -->
+    <rect x="150" y="470" width="620" height="120"/>
+    <!-- glazing lines -->
+    <g stroke="#6F6A62" stroke-width="1.2">
+      <line x1="150" y1="700" x2="620" y2="700"/>
+      <line x1="150" y1="840" x2="620" y2="840"/>
+      <line x1="290" y1="590" x2="290" y2="980"/>
+      <line x1="430" y1="590" x2="430" y2="980"/>
+      <line x1="550" y1="590" x2="550" y2="980"/>
+    </g>
+    <!-- entry, terracotta accent -->
+    <rect x="330" y="770" width="100" height="210" stroke="#A45A3B" stroke-width="2.2"/>
+  </g>
+
+  <!-- secondary vertical volume -->
+  <g stroke="#1A1917" stroke-width="2.2" fill="none">
+    <rect x="640" y="590" width="200" height="390"/>
+    <g stroke="#6F6A62" stroke-width="1.2">
+      <line x1="640" y1="710" x2="840" y2="710"/>
+      <line x1="640" y1="830" x2="840" y2="830"/>
+      <line x1="740" y1="590" x2="740" y2="980"/>
+    </g>
+  </g>
+
+  <!-- low garden wall -->
+  <line x1="150" y1="980" x2="150" y2="880" stroke="#1A1917" stroke-width="2.2"/>
+  <path d="M60 980 L60 920 L150 920" stroke="#1A1917" stroke-width="2.2" fill="none"/>
+
+  <!-- slender trees -->
+  <g stroke="#8C8578" stroke-width="1.6" fill="none">
+    <line x1="905" y1="980" x2="905" y2="720"/>
+    <circle cx="905" cy="690" r="42"/>
+    <line x1="965" y1="980" x2="965" y2="800"/>
+    <circle cx="965" cy="775" r="30"/>
+  </g>
+
+  <!-- dimension line -->
+  <g stroke="#A45A3B" stroke-width="1.2">
+    <line x1="150" y1="1035" x2="620" y2="1035"/>
+    <line x1="150" y1="1023" x2="150" y2="1047"/>
+    <line x1="620" y1="1023" x2="620" y2="1047"/>
+  </g>
+</svg>
